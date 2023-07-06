@@ -1,3 +1,4 @@
-Work is Under Progress
-[Click here](https://iamvijaykumar.github.io/Demo/Calculator.html) to navigate to main page
-Styling Done By Yummy
+Work is Under Progress <br>
+Styling Done by Yummy <br>
+[Click here](https://iamvijaykumar.github.io/Demo/Calculator.html) to navigate to main page <br>
+
