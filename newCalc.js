@@ -10,6 +10,7 @@ function myFunction(button){
 
     if(x==0 ){
         if(val=='X' ||val=='+'||val=='-'||val=='/'||val=='%'){
+            errorMsg("Invalid Choice");
             alert("Invalid Choice");
             window.location.reload();
         }
