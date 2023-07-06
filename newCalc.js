@@ -9,7 +9,7 @@ function myFunction(button){
     const res=document.getElementById("res");
 
     if(x==0 ){
-        if(val=='X' ||val=='+'||val=='-'||val=='/'||val=='%'){
+        if(val=='X' ||val=='+'||val=='-'||val=='/'||val=='%'|| val=='='){
             errorMsg("Invalid Choice");
             alert("Invalid Choice");
             window.location.reload();
@@ -72,6 +72,7 @@ function myFunction(button){
             console.log(input.innerHTML);
             input.innerHTML=input.innerHTML.slice(0,-1);
             res.innerHTML="";
+            x=0;
             
         }
     }  
@@ -136,4 +137,7 @@ function calculatePercentage(x,res){
     else{
        x.innerHTML=y.slice(0,-1)/100+'*'; 
     }
+}
+function errorMsg(str){
+
 }

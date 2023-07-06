@@ -24,8 +24,8 @@
     text-align: end;
     height:75px;
     width:379px;
-    overflow-wrap:break-word ;
-    font-size: 1.5em;
+    word-wrap: break-word;
+    font-size: larger;
 }
 #res{
     border-bottom: 2px solid grey;
