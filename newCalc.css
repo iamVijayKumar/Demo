@@ -9,7 +9,6 @@
 
 #Calc{ 
     text-align: center;
-    
     border-radius: 2%;
     font-size: 2em;
     font-weight: bolder;
@@ -19,21 +18,25 @@
     font-style: normal;
     font-size:medium;
     color: red;
+    text-align: center;
+    height:20px;
 }
 #input{
     text-align: end;
-    height:75px;
+    height:100px;
     width:379px;
     word-wrap: break-word;
-    font-size: larger;
+    font-size: 1.25em;
+    margin-bottom: 2%;
 }
 #res{
     border-bottom: 2px solid grey;
     text-align: end;
     height:50px;
-    margin-top: 0px;
     margin-bottom: 5%;
     position: relative;
+    font-size:1em;
+    color: rgb(71, 71, 71);
 }
 
 #button-group button{
