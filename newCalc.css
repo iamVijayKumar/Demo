@@ -7,7 +7,7 @@ html body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5% auto;
+    margin:auto;
 }
 #Calc{ 
     text-align: center;
@@ -46,8 +46,8 @@ html body{
 }
 @media only screen and (max-width: 445px) {
    #button-group{
-    width: 375px;
-    padding: 5px;
+    width: 25%;
+    margin:5%;
    }
   }
 
