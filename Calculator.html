@@ -8,20 +8,37 @@
     <title>Calculator</title>
     <!-- Latest compiled and minified CSS -->
     <script src="./newCalc.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="main">
-        
+
         <div id="Calc">
-            <h2 style="margin: 0%;">Calculator</h2>
+           
+            
+            <div id="layer2">
+                <h4 style="margin: 0%; margin-right: auto;">Calculator</h4>
+                <div id="modeButton">
+                    <label class="switch" for="Theme">
+                    <input type="checkbox" id="Theme" onchange="changeTheme()">
+                     
+                    <span class="slider">
+                        <span class="fa fa-sun-o" id="sun" aria-hidden="true"></span>
+                        <span class="fa fa-moon-o" id="moon" aria-hidden="true"></span>
+                    </span>
+                    </label>
+                </div>  
+            </div>
             <div id="errorMsg"></div>
+            
             <div id="input"></div>
             <div id="res"></div>
             <div id="button-group">
                 <button onclick="myFunction(this)">C</button>
+                <button onclick="myFunction(this)">&#8592</button>
                 <button onclick="myFunction(this)">%</button>
-                <button onclick="myFunction(this)">/</button>
-                <button onclick="myFunction(this)" style="background-color: rgb(230, 111, 111);">&#8592</button><br>
+                <button onclick="myFunction(this)">/</button><br>
+                
                 <button onclick="myFunction(this)">7</button>
                 <button onclick="myFunction(this)">8</button>
                 <button onclick="myFunction(this)">9</button>

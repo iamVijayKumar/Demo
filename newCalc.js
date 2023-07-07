@@ -4,10 +4,12 @@ var input=document.getElementById("input");
 let x=0;
 var dCount=0;
 var lCount=0;
+
 function myFunction(button){
     const val=button.innerText;
     const input=document.getElementById("input");
     const res=document.getElementById("res");
+
     if(x==0 ){
         if(val=='X' ||val=='+'||val=='-'||val=='/'||val=='%'|| val=='='){
             errorMsg("Invalid Choice");
@@ -32,6 +34,9 @@ function myFunction(button){
             errorMsg("");
             return;
         }
+        return;
+    }
+    if(eval(input.innerHTML=="Infinity")){
         return;
     }
     let a=['X','/','-','+','%','*'];
@@ -76,15 +81,19 @@ function myFunction(button){
     } 
     else if(val==="\u2190"){
         if(input.innerHTML.length>1&input.innerHTML.length<=31){
+            if(input.innerHTML.slice(-1)=="."){
+                dCount=0;
+                console.log(eval(input.innerHTML));
+            }
             input.innerHTML=input.innerHTML.slice(0,-1);
-            if(a.includes(input.innerHTML.slice(-1))){
+            if(a.includes(input.innerHTML.slice(-1))||eval(input.innerHTML)==Infinity){
                res.innerHTML="";
                return;
             }
             res.innerHTML=eval(input.innerHTML);
         }
+
         else{
-            input.innerHTML=input.innerHTML.slice(0,-1);
             res.innerHTML="";
             x=0;
             
@@ -125,7 +134,9 @@ function myFunction(button){
         }
         errorMsg("");
         input.innerHTML+=val;
-        res.innerHTML=eval(input.innerHTML); 
+        if(eval!="Infinity"){
+            res.innerHTML=eval(input.innerHTML);
+        }
     }
    
    
@@ -154,4 +165,10 @@ function calculatePercentage(x,res){
 }
 function errorMsg(str){
    document.getElementById('errorMsg').innerHTML=str;
+}
+function changeTheme(){
+    var swi=document.getElementById("Theme");{
+        console.log(swi.checked==true);
+    }
+    
 }

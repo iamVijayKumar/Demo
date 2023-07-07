@@ -12,15 +12,126 @@
     border-radius: 2%;
     font-size: 2em;
     font-weight: bolder;
+    background-color:rgb(255, 255, 255);
+}
+#layer2{
+    display:flex;
+    flex-direction: row;
+}
+
+#modeButton{
+   display: flex;
+}
+.switch {
+    position: relative;
+    width: 100px;
+    height: 34px;
+    border: 1px solid back;
+}
+input{
+    opacity: 0;
+    display: none;
 }
 #errorMsg{
-    margin: 0%;
+    margin: auto;
     font-style: normal;
     font-size:medium;
     color: red;
+    height:30px;
+    margin-top: 2%;
     text-align: center;
-    height:20px;
 }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3395f7;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    justify-content: space-between;
+}
+#sun{
+    color:yellow;
+}
+#moon{
+    color:white;
+    padding: 2%;
+    transform: scaleX(-1);
+    visibility: hidden;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 5px;
+    bottom: 7px;
+    background-color: yellow;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+.slider::after{
+    content: "";
+    height: 22px;
+    width: 22px;
+    bottom: 7px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    visibility: hidden;
+}
+input:checked + .slider{
+    background-color:black;
+}
+input:checked + .slider:before {
+    background-color: white;
+    -webkit-transform: translateX(68px);
+    -ms-transform: translateX(68px);
+    transform: translateX(68px) scale(1.2) rotate(90deg); 
+}
+
+input:checked + .slider::after {
+    visibility: visible;
+    background-color: black;
+    -webkit-transform: translateX(66px);
+    -ms-transform: translateX(66px);
+    transform: translate(66px) translateY(-4px); 
+}
+
+input.checked + .slider #moon{
+    visibility: visible;
+    
+}
+
+input:checked + .slider #sun{
+    visibility: hidden;
+}
+
+.moon{
+    width:50px;
+    height:50px;
+    background-color: blue;
+    border-radius:50% ;
+    position: relative;
+}
+.moon::after{
+    position: absolute;
+    content:"";
+    width:50px;
+    height:50px;
+    background-color: white;
+    border-radius:50% ;
+    left:25%;
+    visibility: hidden;
+
+}
+  
 #input{
     text-align: end;
     height:100px;
@@ -33,13 +144,17 @@
     border-bottom: 2px solid grey;
     text-align: end;
     height:50px;
-    margin-bottom: 5%;
+    
     position: relative;
     font-size:1em;
-    color: rgb(71, 71, 71);
+    color: rgb(110, 110, 110);
+}
+#button-group{
+    padding-top: 2%;
+    background-color: whitesmoke;
 }
 
-#button-group button{
+#button-group button:not(:nth-child(20)){
     border-radius: 50%;
     background-color: rgb(140, 163, 232);
     color: white;
@@ -51,6 +166,34 @@
     box-shadow: 0 2px 4px darkslategray;
     margin:5px 0px;
 }
+#button-group button:last-child{
+    border-radius: 50%;
+    background-color: rgb(230, 111, 111);
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 31px;
+    height: 80px;
+    width: 80px;
+    box-shadow: 0 2px 4px darkslategray;
+    margin:5px 0px;
+}
+
+#button-group button:not(:last-child):hover {background-color:  rgb(106, 142, 250)}
+#button-group button:last-child:hover {background-color:  rgb(238, 71, 71)}
+
+#button-group button:not(:last-child):active {
+  background-color:  rgb(120, 152, 248);
+  box-shadow: 0 5px #666;
+  transform: translatey(2px);
+}
+#button-group button:last-child:active {
+  background-color:  rgb(240, 58, 58);
+  box-shadow: 0 5px #666;
+  transform: translatey(2px);
+}
+
+
 @media only screen and (max-width: 350px) {
    #main{
     margin:0%;
