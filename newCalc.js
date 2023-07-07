@@ -167,8 +167,24 @@ function errorMsg(str){
    document.getElementById('errorMsg').innerHTML=str;
 }
 function changeTheme(){
-    var swi=document.getElementById("Theme");{
-        console.log(swi.checked==true);
+    var swi=document.getElementById('Theme').checked;
+    console.log("dark");
+    var Bgs=document.getElementsByTagName('div');
+    for(var i=1;i<Bgs.length-1;i++){
+        Bgs[i].classList.toggle('dark-mode');
     }
-    
+    var x=document.getElementById('button-group');
+    var btns=document.getElementsByTagName('button');
+    console.log(btns);
+    if(swi){
+        x.style.backgroundColor='Black';
+        for(var i=0;i<btns.length-1;i++){
+            console.log(btns[i]);
+            btns[i].classList.toggle('dark-mode');
+        }
+    }
+    else{
+        x.style.backgroundColor='whitesmoke';
+    }
+
 }

@@ -16,7 +16,8 @@
 #layer2{
     display:flex;
     flex-direction: row;
-    border:2px solid black;
+    margin-bottom: 0;
+    padding-bottom: 5px;
 }
 
 #modeButton{
@@ -35,13 +36,13 @@ input{
     display: none;
 }
 #errorMsg{
-    margin: auto;
     font-style: normal;
     font-size:medium;
     color: red;
-    height:30px;
-    margin-top: 2%;
+    height:26px;
     text-align: center;
+    padding-top: 2px;
+    border:none;
 }
 .slider {
     position: absolute;
@@ -136,25 +137,26 @@ input:checked + .slider #sun{
   
 #input{
     text-align: end;
+    margin-top: 0;
     height:100px;
     width:379px;
     word-wrap: break-word;
     font-size: 1.25em;
-    margin-bottom: 2%;
-    
-    border: 2px solid grey;
+    padding-bottom: 2%;
+    padding-bottom: 0%;
 }
 #res{
-    border: 2px solid grey;
+    border-bottom: 2px solid grey;
     text-align: end;
-    height:50px;
+    height: 48px;
+    padding-top: 0%;
     position: relative;
     font-size:1em;
     color: rgb(110, 110, 110);
 }
 #button-group{
     padding-top: 2%;
-    background-color: whitesmoke;
+   
 }
 
 #button-group button:not(:nth-child(20)){
@@ -168,6 +170,7 @@ input:checked + .slider #sun{
     width: 80px;
     box-shadow: 0 2px 4px darkslategray;
     margin:5px 0px;
+    text-align: center;
 }
 #button-group button:last-child{
     border-radius: 50%;
@@ -180,10 +183,15 @@ input:checked + .slider #sun{
     width: 80px;
     box-shadow: 0 2px 4px darkslategray;
     margin:5px 0px;
+    text-align: center;
 }
 
-#button-group button:not(:last-child):hover {background-color:  rgb(106, 142, 250)}
-#button-group button:last-child:hover {background-color:  rgb(238, 71, 71)}
+#button-group button:not(:last-child):hover {
+    background-color:  rgb(106, 142, 250)
+}
+#button-group button:last-child:hover {
+    background-color:  rgb(238, 71, 71)
+}
 
 #button-group button:not(:last-child):active {
   background-color:  rgb(120, 152, 248);
@@ -196,7 +204,10 @@ input:checked + .slider #sun{
   transform: translatey(2px);
 }
 
-
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
 @media only screen and (max-width: 350px) {
    #main{
     margin:0%;
