@@ -16,11 +16,12 @@
 #layer2{
     display:flex;
     flex-direction: row;
+    border:2px solid black;
 }
 
 #modeButton{
    display: flex;
-   padding-right: 2px;
+   padding-right: 5px;
    padding-top: 5px;
 }
 .switch {
@@ -140,12 +141,13 @@ input:checked + .slider #sun{
     word-wrap: break-word;
     font-size: 1.25em;
     margin-bottom: 2%;
+    
+    border: 2px solid grey;
 }
 #res{
-    border-bottom: 2px solid grey;
+    border: 2px solid grey;
     text-align: end;
     height:50px;
-    
     position: relative;
     font-size:1em;
     color: rgb(110, 110, 110);
