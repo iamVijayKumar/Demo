@@ -173,6 +173,8 @@ function changeTheme(){
     for(var i=1;i<Bgs.length-1;i++){
         Bgs[i].classList.toggle('dark-mode');
     }
+    
+   document.body.classList.toggle("dark-mode");
     var x=document.getElementById('button-group');
     var btns=document.getElementsByTagName('button');
     console.log(btns);
