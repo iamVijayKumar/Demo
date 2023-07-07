@@ -9,7 +9,6 @@
 
 #Calc{ 
     text-align: center;
-    border-radius: 2%;
     font-size: 2em;
     font-weight: bolder;
     background-color:rgb(255, 255, 255);
@@ -21,6 +20,8 @@
 
 #modeButton{
    display: flex;
+   padding-right: 2px;
+   padding-top: 5px;
 }
 .switch {
     position: relative;
